@@ -1,0 +1,57 @@
+#accessing string
+str1 = "Hello"
+str2 = 'World'
+str3 = str("Python")
+print(str1, str2, str3)
+#concatinating of string
+a = "Hello"
+b = "World"
+result = a + " " + b
+print("Concatenated String:", result)
+#len of string
+s = "Python"
+print("Length:", len(s))
+# Extract a String Using Substring (Slicing)
+s = "HelloWorld"
+print("Substring (0–5):", s[0:5]) 
+#Searching in Strings Using  index()
+s = "DataScience"
+print("Index of 'Science':", s.index("Science"))
+#. Matching String Against a Regex (Python equivalent to matches() in Java)
+import re
+
+s = "abc123"
+pattern = r"^[a-z]{3}\d{3}$"
+match = re.fullmatch(pattern, s)
+
+print("Regex Match:", bool(match)) 
+#comparing strings
+s1 = "hello"
+s2 = "Hello"
+
+print("Equal:", s1 == s2)          # False
+print("Case-insensitive equal:", s1.lower() == s2.lower()) 
+#startswith(), endswith() and compareTo() Equivalent
+s = "PythonProgramming"
+
+print("Starts with 'Python':", s.startswith("Python"))     # True
+print("Ends with 'ing':", s.endswith("ing"))               # True
+print("Compare strings:", (s > "Java") - (s < "Java"))
+# Trimming Strings with strip()
+s = "  Hello World  "
+print("Trimmed:", s.strip()) 
+#replace()
+s = "banana"
+print("Replaced:", s.replace("a", "o"))
+#split()
+s = "apple,banana,cherry"
+fruits = s.split(",")
+print("Split result:", fruits)
+#upper lowercase
+s = "Python"
+print("Uppercase:", s.upper())
+print("Lowercase:", s.lower())
+#Converting Integer Objects to Strings
+num = 123
+str_num = str(num)
+print("Converted:", str_num, "Type:", type(str_num))

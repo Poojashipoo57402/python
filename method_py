@@ -1,0 +1,59 @@
+
+#Same Method Name, Different Number of Parameters (Same Type)
+
+class Demo:
+    def greet(self, *args):
+        if len(args) == 1:
+            print("Hello", args[0])
+        elif len(args) == 2:
+            print("Hello", args[0], "and", args[1])
+        else:
+            print("Hello everyone")
+
+# Example usage
+obj = Demo()
+obj.greet("Alisha")
+obj.greet("Alisha", "Priya")
+obj.greet()
+#Same Method Name, Different Parameters of Different Data Types
+
+class Calculator:
+    def add(self, a, b):
+        if isinstance(a, int) and isinstance(b, int):
+            print("Sum (int):", a + b)
+        elif isinstance(a, float) or isinstance(b, float):
+            print("Sum (float):", float(a) + float(b))
+        elif isinstance(a, str) and isinstance(b, str):
+            print("Concatenation:", a + b)
+        else:
+            print("Unsupported types")
+
+# Example usage
+calc = Calculator()
+calc.add(2, 3)           # int
+calc.add(2.5, 3.1)       # float
+calc.add("Hi ", "there") # string
+#Same Method Name and Same Number of Parameters of Same Type
+
+class Example:
+    def show(self, name):
+        print("First method:", name)
+
+    def show(self, name):  # This overrides the previous one
+        print("Second method:", name)
+
+
+obj = Example()
+obj.show("Alisha")  # Always calls the second one
+
+class Example:
+    def show(self, name):
+        if name == "Alisha":
+            print("Welcome, Alisha!")
+        else:
+            print("Hello", name)
+
+# Example usage
+obj = Example()
+obj.show("Alisha")
+obj.show("Priya")
