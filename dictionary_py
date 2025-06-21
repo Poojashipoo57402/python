@@ -1,0 +1,41 @@
+#Create a Dictionary with at least 5 key-value pairs (Student ID → Name)
+
+students = {
+    "S001": "Alisha",
+    "S002": "Rahul",
+    "S003": "Sneha",
+    "S004": "Amit",
+    "S005": "Priya"
+}
+print("Initial Dictionary:", students)
+#Add a Value to the Dictionary
+
+students["S006"] = "Ravi"
+print("After Adding:", students)
+# Update a Value in the Dictionary
+
+students["S002"] = "Rohan"  # Updating Rahul to Rohan
+print("After Updating:", students)
+#Access a Value in the Dictionary
+
+print("Student with ID S003:", students["S003"])
+#Create a Nested Dictionary
+
+nested_students = {
+    "S001": {"name": "Alisha", "age": 20},
+    "S002": {"name": "Rohan", "age": 21},
+    "S003": {"name": "Sneha", "age": 22}
+}
+print("Nested Dictionary:", nested_students)
+#Access Values in Nested Dictionary
+
+print("Name of S001:", nested_students["S001"]["name"])
+print("Age of S003:", nested_students["S003"]["age"])
+#Print Keys of a Dictionary
+
+print("Student IDs:", list(students.keys()))
+#Delete a Value from Dictionary
+
+del students["S004"]
+print("After Deletion:", students)
+
